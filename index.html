@@ -1,12 +1,59 @@
 <html>
   <head>
     <title>What If?</title>
+
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900italic,900' rel='stylesheet' type='text/css'>
+    <style>
+        body {
+            background-color: beige;
+            font-family: 'Roboto';
+        }
+        #content {
+            display: block;
+            text-align: center;
+        }
+        textarea {
+            border-color: black;
+            border-width: 4px;
+            height: 200px;
+            width: 400px;
+            font-size: 14pt;
+        }
+        button {
+            font-size: 14pt;
+            font-weight: bold;
+            margin-top: 4px; 
+            width: 400px;
+            border-width: 4px;
+            border-color: black;
+            background-color: aquamarine;
+            color: black;
+        }
+
+        p {
+            font-size: 10pt;
+        }
+
+        p.error {
+            font-size: 11pt;
+            color: tomato;
+            font-weight: 600;
+        }
+    </style>
   </head>
   <body>
     <div id="content">
-      <textarea id="ifClause"> =IF(A1='A', IF(A2='B', 'AB+', 'AC+'), IF(A3='B', 'X+B', 'X+C'))</textarea>
-      <button id="ifClauseBtn">Explain!</button>
+        <h1>What IF?</h1>
+        <h3>An IF explainer.</h3>
+        <h3>You could not understand that long IF formula in Excel or Google Sheet in your corporate job? My wife too.</h3>
+        <h3>Just paste your IF formula here and I will create the flow chart to help you understand.</h3>
+      <div>
+        <textarea id="ifClause"> =IF(A1='A', IF(A2='B', 'AB+', 'AC+'), IF(A3='B', 'X+B', 'X+C'))</textarea>
+      </div>
+        <button id="ifClauseBtn">Explain!</button>
+        <p>like/hate it? please let <a href="https://twitter.com/DevIrvanda">me</a> know!</p>
       <pre id="ifGraph">
+        <p class="error" id="error"></p>
       </pre>
     </div>
 
